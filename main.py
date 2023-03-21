@@ -41,5 +41,5 @@ for i in range(len(squawk)):
     lcd.putstr(f"right now! Going {speed[i]}")
     lcd.move_to(0,3)
     lcd.putstr(f"knots. Squawk: {squawk[i]}")
-    time.sleep(3000)
+    time.sleep(3)
 

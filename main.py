@@ -1,4 +1,5 @@
 import json
+import time
 from lcd_api import LcdApi
 from i2c_lcd import I2cLcd
 
@@ -31,12 +32,14 @@ for aircraft in data["aircraft"]:
 #for i in range(len(squawk)):
 #    print(squawk[i], flight[i], altitude[i], speed[i])
 
-lcd.move_to(0,0)
-lcd.putstr(f"Flight {flight[0]} is")
-lcd.move_to(0,1)
-lcd.putstr(f"{altitude[0]} feet above")
-lcd.move_to(0,2)
-lcd.putstr(f"right now! Going {speed[0]}")
-lcd.move_to(0,3)
-lcd.putstr(f"knots. Squawk: {squawk[0]}")
+for i in range(len(squawk)):
+    lcd.move_to(0,0)
+    lcd.putstr(f"Flight {flight[i]} is")
+    lcd.move_to(0,1)
+    lcd.putstr(f"{altitude[i]} feet above")
+    lcd.move_to(0,2)
+    lcd.putstr(f"right now! Going {speed[i]}")
+    lcd.move_to(0,3)
+    lcd.putstr(f"knots. Squawk: {squawk[i]}")
+    time.sleep(3000)
 

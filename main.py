@@ -34,7 +34,9 @@ for aircraft in data["aircraft"]:
 lcd.move_to(0,0)
 lcd.putstr(f"Flight {flight[0]} is")
 lcd.move_to(0,1)
-lcd.putstr(f"{altitude[0]} feet above right now!")
+lcd.putstr(f"{altitude[0]} feet above")
 lcd.move_to(0,2)
-lcd.putstr(f"Going {speed[0]} knots.")
+lcd.putstr("right now! Going")
+lcd.move_to(0,3)
+lcd.putstr(f"{speed[0]} knots.")
 

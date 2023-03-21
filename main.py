@@ -31,10 +31,10 @@ for aircraft in data["aircraft"]:
 #for i in range(len(squawk)):
 #    print(squawk[i], flight[i], altitude[i], speed[i])
 
-
-lcd.putstr(f"Flight {flight[0]} is")
 lcd.move_to(0,1)
-lcd.putstr(f"{altitude[0]} feet above right now!")
+lcd.putstr(f"Flight {flight[0]} is")
 lcd.move_to(0,2)
+lcd.putstr(f"{altitude[0]} feet above right now!")
+lcd.move_to(0,3)
 lcd.putstr(f"Going {speed[0]} knots.")
 

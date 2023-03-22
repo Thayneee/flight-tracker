@@ -33,9 +33,11 @@ while True:
     if len(squawk) == 0:
         lcd.clear()
         lcd.move_to(0,0)
-        lcd.putstr("There are no planes above.")
+        lcd.putstr("There are no planes")
         lcd.move_to(0,1)
-        lcd.putstr(":(")
+        lcd.putstr("above. :(")
+        time.sleep(3)
+        continue
     else:
         for i in range(len(squawk)):
             lcd.move_to(0,0)

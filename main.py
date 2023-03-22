@@ -40,6 +40,7 @@ while True:
         continue
     else:
         for i in range(len(squawk)):
+            lcd.clear()
             lcd.move_to(0,0)
             lcd.putstr(f"Flight {flight[i]} is")
             lcd.move_to(0,1)
